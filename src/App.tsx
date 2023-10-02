@@ -1,4 +1,5 @@
 import Navbar from "@/scenes/navbar";
+import Home from "@/scenes/home";
 import { useEffect, useState } from "react";
 import { SelectedPage } from "./shared/types";
 
@@ -22,6 +23,7 @@ function App() {
     // When component unmounts
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
     <div className="app bg-gray-20">
       <Navbar
@@ -29,6 +31,7 @@ function App() {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
+      <Home setSelectedPage={setSelectedPage} />
     </div>
   );
 }
