@@ -11,26 +11,32 @@ type Props = {
 };
 
 function Home({ setSelectedPage }: Props) {
-  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
+  const isAboveMediumScreens = useMediaQuery("(min-width: 1113px)");
 
   return (
     <section id="home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
       {/* IMAGE AND MAIN HEADER */}
-      <div>
+      <div className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6">
         {/* MAIN HEADER */}
-        <div>
+        <div className="z-10 mt-32 md:basis-3/5">
           {/* HEADINGS */}
-          <div>
-            <div>
-              <div>
-                <img src={HomePageText} alt="home-page-text" />
+          <div className="md:-mt-19">
+            <div className="relative">
+              <div className="md:before:content-gracetext before:absolute before:-left-16 before:-top-40 before:z-[-1] before:opacity-50">
+                <img
+                  src={HomePageText}
+                  alt="home-page-text"
+                  className="w-full max-w-lg"
+                />
               </div>
             </div>
-            <p>Join Us At 12:30pm Every Sunday Afternoon.</p>
+            <p className="mt-8 text-sm">
+              Join Us At 12:30pm Every Sunday Afternoon.
+            </p>
           </div>
 
           {/* ACTIONS */}
-          <div>
+          <div className="mt-8 flex items-center gap-8">
             <ActionButton setSelectedPage={setSelectedPage}>
               Join Us Sunday
             </ActionButton>
@@ -47,17 +53,21 @@ function Home({ setSelectedPage }: Props) {
         </div>
 
         {/* IMAGE */}
-        <div>
-          <img src={HomePageGraphic} alt="home-page-graphic" />
+        <div className="flex basis-3/5 justify-center md:z-10 md:ml-40 mt-16 md:justify-items-end">
+          <img
+            src={HomePageGraphic}
+            alt="home-page-graphic"
+            className=" max-w-md rounded-3xl border-4"
+          />
         </div>
       </div>
 
       {/* MESSAGE */}
       {isAboveMediumScreens && (
-        <div>
-          <div>
-            <div>
-              <img src={Character} alt="caricature" />
+        <div className="h-[150px] w-full bg-primary-100">
+          <div className="mx-auto w-5/6">
+            <div className="flex w-3/5 items-center justify-between gap-8 ">
+              <img src={Character} alt="caricature" className="h-36" />
             </div>
           </div>
         </div>
