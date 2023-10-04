@@ -2,7 +2,7 @@
 // exists as a particular type: (i.e. SelectedPage) and as a value: (i.e. SelectedPage.Home) to be used in code
 export enum SelectedPage {
   Home = "home",
-  About = "About",
+  About = "about",
   OurService = "ourservice",
   ContactUs = "contactus",
 }
