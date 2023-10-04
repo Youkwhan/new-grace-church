@@ -5,6 +5,7 @@ import ActionButton from "@/shared/ActionButton";
 import HomePageText from "@/assets/HomePageText.png";
 import HomePageGraphic from "@/assets/HomePageGraphic.png";
 import Character from "@/assets/avatar.png";
+import { motion } from "framer-motion";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -20,9 +21,19 @@ function Home({ setSelectedPage }: Props) {
         {/* MAIN HEADER */}
         <div className="z-10 mt-32 md:basis-3/5">
           {/* HEADINGS */}
-          <div className="md:-mt-19">
+          <motion.div
+            className="md:-mt-19"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
             <div className="relative">
-              <div className="md:before:content-gracetext before:absolute before:-left-16 before:-top-40 before:z-[-1] before:opacity-50">
+              <div className="before:absolute before:-left-16 before:-top-40 before:z-[-1] before:opacity-50 md:before:content-gracetext">
                 <img
                   src={HomePageText}
                   alt="home-page-text"
@@ -33,7 +44,7 @@ function Home({ setSelectedPage }: Props) {
             <p className="mt-8 text-sm">
               Join Us At 12:30pm Every Sunday Afternoon.
             </p>
-          </div>
+          </motion.div>
 
           {/* ACTIONS */}
           <div className="mt-8 flex items-center gap-8">
@@ -53,7 +64,7 @@ function Home({ setSelectedPage }: Props) {
         </div>
 
         {/* IMAGE */}
-        <div className="flex basis-3/5 justify-center md:z-10 md:ml-40 mt-16 md:justify-items-end">
+        <div className="mt-16 flex basis-3/5 justify-center md:z-10 md:ml-40 md:justify-items-end">
           <img
             src={HomePageGraphic}
             alt="home-page-graphic"
