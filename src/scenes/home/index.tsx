@@ -6,7 +6,6 @@ import HomePageText from "@/assets/HomePageText.png";
 import HomePageGraphic from "@/assets/HomePageGraphic.png";
 import Character from "@/assets/avatar.png";
 import { motion } from "framer-motion";
-import { delay } from "framer-motion/dom";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -18,7 +17,10 @@ function Home({ setSelectedPage }: Props) {
   return (
     <section id="home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
       {/* IMAGE AND MAIN HEADER */}
-      <div className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6">
+      <motion.div
+        className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6"
+        onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
+      >
         {/* MAIN HEADER */}
         <div className="z-10 mt-32 md:basis-3/5">
           {/* HEADINGS */}
@@ -82,7 +84,7 @@ function Home({ setSelectedPage }: Props) {
             className=" max-w-md rounded-3xl border-4"
           />
         </div>
-      </div>
+      </motion.div>
 
       {/* MESSAGE */}
       {isAboveMediumScreens && (
