@@ -1,4 +1,4 @@
-import { SelectedPage } from "@/shared/types";
+import { CardType, SelectedPage } from "@/shared/types";
 import HText from "@/shared/HText";
 import {
   HomeModernIcon,
@@ -6,8 +6,30 @@ import {
   AcademicCapIcon,
 } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
+import Card from "./Card";
 
 type Props = { setSelectedPage: (value: SelectedPage) => void };
+
+const cards: Array<CardType> = [
+  {
+    icon: <HomeModernIcon className="h-6 w-6" />,
+    title: "State of the Art Facilities",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, minus!",
+  },
+  {
+    icon: <UserGroupIcon className="h-6 w-6" />,
+    title: "100's of Diverse Classes",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, minus!",
+  },
+  {
+    icon: <AcademicCapIcon className="h-6 w-6" />,
+    title: "Expert and Pro Trainers",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, minus!",
+  },
+];
 
 function About({ setSelectedPage }: Props) {
   return (
@@ -19,7 +41,18 @@ function About({ setSelectedPage }: Props) {
           <HText>MORE THAN JUST A CHURCH.</HText>
           <p>Experience Grace, Community, and Spiritual Growth.</p>
         </div>
-        {/* INFO */}
+        {/* INFO Cards */}
+        <div>
+          {cards.map((card: CardType) => (
+            <Card
+              key={card.title}
+              icon={card.icon}
+              title={card.title}
+              description={card.description}
+              setSelectedPage={setSelectedPage}
+            />
+          ))}
+        </div>
       </motion.div>
     </section>
   );
