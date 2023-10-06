@@ -13,19 +13,19 @@ type Props = { setSelectedPage: (value: SelectedPage) => void };
 const cards: Array<CardType> = [
   {
     icon: <HomeModernIcon className="h-6 w-6" />,
-    title: "State of the Art Facilities",
+    title: "Sundays",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, minus!",
   },
   {
     icon: <UserGroupIcon className="h-6 w-6" />,
-    title: "100's of Diverse Classes",
+    title: "Wednesdays",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, minus!",
   },
   {
     icon: <AcademicCapIcon className="h-6 w-6" />,
-    title: "Expert and Pro Trainers",
+    title: "Location",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, minus!",
   },
