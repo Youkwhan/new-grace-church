@@ -8,6 +8,11 @@ import {
 import { motion } from "framer-motion";
 import Card from "./Card";
 
+const container = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.2 } },
+};
+
 type Props = { setSelectedPage: (value: SelectedPage) => void };
 
 const cards: Array<CardType> = [
@@ -44,7 +49,13 @@ function About({ setSelectedPage }: Props) {
           </p>
         </div>
         {/* INFO Cards */}
-        <div className="mt-5 items-center justify-between gap-8 md:flex">
+        <motion.div
+          className="mt-5 items-center justify-between gap-8 md:flex"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={container}
+        >
           {cards.map((card: CardType) => (
             <Card
               key={card.title}
@@ -55,7 +66,7 @@ function About({ setSelectedPage }: Props) {
               setSelectedPage={setSelectedPage}
             />
           ))}
-        </div>
+        </motion.div>
       </motion.div>
     </section>
   );
