@@ -7,13 +7,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import Card from "./Card";
-
-const container = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.2 } },
-};
-
-type Props = { setSelectedPage: (value: SelectedPage) => void };
+import AboutPageGraphic from "@/assets/AboutPageGraphic.png";
 
 const cards: Array<CardType> = [
   {
@@ -35,6 +29,15 @@ const cards: Array<CardType> = [
     info: "(St. Barnabas Church)\nT. 914-815-5526 (Cell)",
   },
 ];
+
+const container = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.2 },
+  },
+};
+
+type Props = { setSelectedPage: (value: SelectedPage) => void };
 
 function About({ setSelectedPage }: Props) {
   return (
@@ -58,6 +61,7 @@ function About({ setSelectedPage }: Props) {
             Experience Grace, Community, and Spiritual Growth.
           </p>
         </motion.div>
+
         {/* INFO Cards */}
         <motion.div
           className="mt-5 items-center justify-between gap-8 md:flex"
@@ -77,6 +81,43 @@ function About({ setSelectedPage }: Props) {
             />
           ))}
         </motion.div>
+
+        {/* GRAPHICS AND DESCRIPTION */}
+        <div className="item-center mt-16 justify-around gap-20 md:mt-28 md:flex">
+          {/* GRAPHIC */}
+          <img
+            src={AboutPageGraphic}
+            alt="about-page-graphic"
+            className="mx-auto md:mx-0 w-96"
+          />
+
+          {/* DESCRIPTION */}
+          <div className="my-20 md:my-auto">
+            {/* TITLE */}
+            <div className="relative">
+              <div className="before:absolute md:before:-left-28 before:-top-20 before:z-[1] before:content-logo">
+                <div className="text-center">
+                  <HText>
+                    Worship with <span className="text-primary-500">US</span>
+                  </HText>
+                </div>
+              </div>
+            </div>
+
+            {/* DESC */}
+            <div>
+              <p className="mt-5 text-center">
+                Located on the hill of Revolutionary Road, Ardsley,
+              </p>
+              <p className="text-center ">
+                we meet in-person on Sundays for worship
+              </p>
+              <p className="mb-5 text-center">
+                and Wednesdays for small groups.
+              </p>
+            </div>
+          </div>
+        </div>
       </motion.div>
     </section>
   );
