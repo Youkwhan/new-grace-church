@@ -3,7 +3,7 @@
 export enum SelectedPage {
   Home = "home",
   About = "about",
-  OurService = "ourservice",
+  OurGallery = "ourgallery",
   ContactUs = "contactus",
 }
 
@@ -12,4 +12,8 @@ export interface CardType {
   title: string;
   description: string;
   info: string;
+}
+
+export interface GalleryType {
+  image: string;
 }
