@@ -67,9 +67,9 @@ function Home({ setSelectedPage }: Props) {
             <AnchorLink
               className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
               onClick={() => {
-                setSelectedPage(SelectedPage.OurService);
+                setSelectedPage(SelectedPage.OurGallery);
               }}
-              href={`#${SelectedPage.OurService}`}
+              href={`#${SelectedPage.OurGallery}`}
             >
               <p>Learn More</p>
             </AnchorLink>
