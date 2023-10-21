@@ -4,8 +4,8 @@ type Props = {
 
 function Gallery({ image }: Props) {
   return (
-    <li className="relative mx-5 inline-block h-[380px] w-[450px]">
-      <img src={image} alt={`${image}`} />
+    <li className="relative mx-5 inline-block h-[380px] w-[450px] bg-cover">
+      <img src={image} alt={`${image}` } className="h-full w-full object-cover" />
     </li>
   );
 }
