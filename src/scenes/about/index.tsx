@@ -20,7 +20,7 @@ const cards: Array<CardType> = [
     icon: <UserGroupIcon className="h-6 w-6" />,
     title: "Wednesdays",
     description: "Online Service",
-    info: "8:00 PM -- Zoom\nRoom: #4235-8967-8765",
+    info: "8:00 PM -- Zoom\nRoom ID: 2739510842",
   },
   {
     icon: <AcademicCapIcon className="h-6 w-6" />,
