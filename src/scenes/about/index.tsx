@@ -88,14 +88,14 @@ function About({ setSelectedPage }: Props) {
           <img
             src={AboutPageGraphic}
             alt="about-page-graphic"
-            className="mx-auto md:mx-0 w-96"
+            className="mx-auto w-96 md:mx-0"
           />
 
           {/* DESCRIPTION */}
           <div className="my-20 md:my-auto">
             {/* TITLE */}
             <div className="relative">
-              <div className="before:absolute md:before:-left-28 before:-top-20 before:z-[1] before:content-logo">
+              <div className="before:absolute before:-top-20 before:z-[1] before:content-logo md:before:-left-28">
                 <div className="text-center">
                   <HText>
                     Worship with <span className="text-primary-500">US</span>
