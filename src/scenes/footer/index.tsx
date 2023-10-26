@@ -1,4 +1,4 @@
-import Logo from "@/assets/textLogo.png";
+import Logo from "/public/logo.svg";
 import GoogleMap from "@/shared/GoogleMap";
 
 function Footer() {
@@ -6,7 +6,12 @@ function Footer() {
     <footer className="bg-primary-100 py-16">
       <div className="justify-content mx-auto w-5/6 gap-16 md:flex">
         <div className="mt-16 basis-1/2 md:mt-0">
-          <img src={Logo} alt="logo" />
+          <div className="flex items-center justify-start gap-2">
+            <img src={Logo} alt="Church logo" className="w-9 " />
+            <span className="whitespace-no-wrap font-montserrat text-2xl font-bold tracking-wider md:text-xl">
+              새은혜교회
+            </span>
+          </div>
           <GoogleMap />
           <p>© 새은혜교회 All Rights Reserved.</p>
         </div>

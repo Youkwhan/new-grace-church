@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import Logo from "@/assets/textLogo.png";
+import Logo from "../../../public/logo.svg";
 import Link from "./Link";
 import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import ActionButton from "@/shared/ActionButton";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 type Props = {
   selectedPage: SelectedPage;
@@ -27,7 +28,16 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
         <div className={`${flexBetween} mx-auto w-5/6`}>
           <div className={`${flexBetween} w-full gap-16`}>
             {/* LEFT SIDE */}
-            <img alt="Church logo" src={Logo} />
+            <AnchorLink
+              className="flex items-center justify-start gap-2"
+              href="#home"
+              onClick={() => setSelectedPage(SelectedPage.Home)}
+            >
+              <img src={Logo} alt="Church logo" className="w-1/5 " />
+              <span className="whitespace-no-wrap font-montserrat text-2xl font-bold tracking-wider md:text-xl">
+                새은혜교회
+              </span>
+            </AnchorLink>
 
             {/* RIGHT SIDE */}
             {isAboveMediumScreens ? (

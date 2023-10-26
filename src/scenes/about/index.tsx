@@ -95,7 +95,7 @@ function About({ setSelectedPage }: Props) {
           <div className="my-20 md:my-auto">
             {/* TITLE */}
             <div className="relative">
-              <div className="before:absolute before:-top-20 before:z-[1] before:content-logo md:before:-left-28">
+              <div className="before:absolute before:-top-16 before:z-[1] before:content-logo md:before:-left-12 transform before:scale-75">
                 <div className="text-center">
                   <HText>
                     Worship with <span className="text-primary-500">US</span>

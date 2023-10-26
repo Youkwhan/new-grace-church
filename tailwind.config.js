@@ -26,7 +26,7 @@ export default {
       content: {
         gracetext: "url('public/GraceText1.svg')",
         gracetext2: "url('public/GraceText2.svg')",
-        logo: "url('./assets/logo.png')",
+        logo: "url('public/logo.svg')",
         corner: "url('./assets/Corner.png')",
       },
     },
