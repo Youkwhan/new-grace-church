@@ -1,6 +1,5 @@
 import { CardType, SelectedPage } from "@/shared/types";
 import HText from "@/shared/HText";
-import GoogleMap from "@/shared/GoogleMap";
 import {
   HomeModernIcon,
   UserGroupIcon,
@@ -92,7 +91,6 @@ function About({ setSelectedPage }: Props) {
             className="mx-auto w-96 md:mx-0"
           />
 
-          <GoogleMap />
           {/* DESCRIPTION */}
           <div className="my-20 md:my-auto">
             {/* TITLE */}

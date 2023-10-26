@@ -1,4 +1,5 @@
 import Logo from "@/assets/textLogo.png";
+import GoogleMap from "@/shared/GoogleMap";
 
 function Footer() {
   return (
@@ -6,11 +7,12 @@ function Footer() {
       <div className="justify-content mx-auto w-5/6 gap-16 md:flex">
         <div className="mt-16 basis-1/2 md:mt-0">
           <img src={Logo} alt="logo" />
-          <p className="my-5">
+          {/* <p className="my-5">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit minus
             esse atque dolorum sed temporibus vitae nesciunt aspernatur, ad
             animi voluptates aut quia facilis quod.
-          </p>
+          </p> */}
+          <GoogleMap />
           <p>© 새은혜교회 All Rights Reserved.</p>
         </div>
         <div className="mt-16 basis-1/4 md:mt-0">

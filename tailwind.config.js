@@ -4,14 +4,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        "gray-20": "#F8F4EB",
-        "gray-50": "#EFE6E6",
-        "gray-100": "#C0AAAA",
-        "gray-500": "#5E0000",
+        "gray-20": "#F9F8F6",
+        "gray-50": "#E8E6EF",
+        "gray-100": "#B2AAC0",
+        "gray-500": "#1C0D47",
         "primary-100": "#C0E2F3",
         "primary-300": "#6BA3D4",
         "primary-500": "#007ACC",
-        "secondary-400": "#58C3FF",
+        "secondary-400": "#0E2837",
         "secondary-500": "#65AEDD",
       },
       backgroundImage: (theme) => ({
