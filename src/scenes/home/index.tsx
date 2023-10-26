@@ -2,7 +2,6 @@ import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import ActionButton from "@/shared/ActionButton";
-import HomePageText from "@/assets/HomePageText.png";
 import HomePageGraphic from "@/assets/HomePageGraphic.png";
 import Character from "@/assets/avatar.png";
 import { motion } from "framer-motion";
@@ -12,7 +11,7 @@ type Props = {
 };
 
 function Home({ setSelectedPage }: Props) {
-  const isAboveMediumScreens = useMediaQuery("(min-width: 1113px)");
+  const isAboveMediumScreens = useMediaQuery("(min-width: 1260px)");
 
   return (
     <section id="home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
@@ -22,7 +21,7 @@ function Home({ setSelectedPage }: Props) {
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
       >
         {/* MAIN HEADER */}
-        <div className="z-10 mt-32 md:basis-3/5">
+        <div className="z-10 mt-32 md:mt-64 md:basis-3/5">
           {/* HEADINGS */}
           <motion.div
             className="md:-mt-19"
@@ -36,12 +35,13 @@ function Home({ setSelectedPage }: Props) {
             }}
           >
             <div className="relative">
-              <div className="before:absolute before:-left-16 before:-top-40 before:z-[-1] before:opacity-50 md:before:content-gracetext">
-                <img
-                  src={HomePageText}
-                  alt="home-page-text"
-                  className="w-full max-w-lg"
-                />
+              <div className="before:absolute before:-top-52 before:z-[-1] before:opacity-50 md:before:content-gracetext">
+                <h1 className="my-2 basis-4/5 font-montserrat text-6xl font-bold tracking-[.30em]">
+                  새은혜교회
+                </h1>
+                <h2 className="basis-3/5 font-montserrat text-2xl">
+                  New Grace Community Church
+                </h2>
               </div>
             </div>
             <p className="mt-8 text-sm">

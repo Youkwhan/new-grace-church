@@ -24,8 +24,8 @@ export default {
         montserrat: ["Montserrat", "sans-serif"],
       },
       content: {
-        gracetext: "url('./assets/GraceText1.png')",
-        gracetext2: "url('./assets/GraceText2.png')",
+        gracetext: "url('public/GraceText1.svg')",
+        gracetext2: "url('public/GraceText2.svg')",
         logo: "url('./assets/logo.png')",
         corner: "url('./assets/Corner.png')",
       },
@@ -33,7 +33,7 @@ export default {
     screens: {
       xs: "480px",
       sm: "768px",
-      md: "1113px",
+      md: "1260px",
     },
   },
   plugins: [],

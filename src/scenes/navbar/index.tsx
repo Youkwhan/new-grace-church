@@ -16,7 +16,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   // reusable tailwind classes
   const flexBetween = "flex items-center justify-between";
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
-  const isAboveMediumScreens = useMediaQuery("(min-width: 1113px)"); // boolean
+  const isAboveMediumScreens = useMediaQuery("(min-width: 1260px)"); // boolean
   const navbarBackground = isTopOfPage ? "" : "bg-primary-100 drop-shadow";
 
   return (

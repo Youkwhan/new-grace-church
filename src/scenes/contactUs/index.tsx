@@ -138,7 +138,7 @@ function ContactUs({ setSelectedPage }: Props) {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            <div className="w-full before:absolute before:-bottom-20 before:-right-2 before:z-[-1] md:before:content-gracetext2">
+            <div className="w-full before:absolute before:-bottom-28 before:-right-2 before:z-[-1] md:before:content-gracetext2">
               <img
                 src={ContactUsPageGraphic}
                 alt="contact-us-page-graphic"
