@@ -24,9 +24,9 @@ export default {
         montserrat: ["Montserrat", "sans-serif"],
       },
       content: {
-        gracetext: "url('public/GraceText1.svg')",
-        gracetext2: "url('public/GraceText2.svg')",
-        logo: "url('public/logo.svg')",
+        gracetext: "url('/GraceText1.svg')",
+        gracetext2: "url('/GraceText2.svg')",
+        logo: "url('/logo.svg')",
         corner: "url('./assets/Corner.png')",
       },
     },

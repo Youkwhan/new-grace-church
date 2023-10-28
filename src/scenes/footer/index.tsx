@@ -1,4 +1,4 @@
-import Logo from "/public/logo.svg";
+import Logo from "/logo.svg";
 import GoogleMap from "@/shared/GoogleMap";
 
 function Footer() {
@@ -31,7 +31,7 @@ function Footer() {
           <h4 className="font-bold">Contact Us</h4>
           <p className="my-5">Newgracecommchurch@gmail.com</p>
           <p className="my-5">hongsonkim415@gmail.com</p>
-          <p>+1(914)815-5526</p>
+          <p>+1(914) 815-5526</p>
         </div>
       </div>
     </footer>

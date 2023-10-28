@@ -67,9 +67,9 @@ function Home({ setSelectedPage }: Props) {
             <AnchorLink
               className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
               onClick={() => {
-                setSelectedPage(SelectedPage.OurGallery);
+                setSelectedPage(SelectedPage.About);
               }}
-              href={`#${SelectedPage.OurGallery}`}
+              href={`#${SelectedPage.About}`}
             >
               <p>Learn More</p>
             </AnchorLink>
@@ -91,7 +91,11 @@ function Home({ setSelectedPage }: Props) {
         <div className="h-[150px] w-full bg-primary-100">
           <div className="mx-auto w-5/6">
             <div className="flex w-3/5 items-center justify-between gap-8 ">
-              <img src={Character} alt="caricature" className="h-36" />
+              <img
+                src={Character}
+                alt="caricature-of-pastor"
+                className="h-36"
+              />
             </div>
           </div>
         </div>
