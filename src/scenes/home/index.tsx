@@ -2,8 +2,8 @@ import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import ActionButton from "@/shared/ActionButton";
-import HomePageGraphic from "@/assets/HomePageGraphic.png";
-import Character from "@/assets/avatar.png";
+import HomePageGraphic from "@/assets/HomePageGraphic.webp";
+import Character from "@/assets/avatar.webp";
 import { motion } from "framer-motion";
 
 type Props = {
@@ -36,10 +36,10 @@ function Home({ setSelectedPage }: Props) {
           >
             <div className="relative">
               <div className="before:absolute before:-top-52 before:z-[-1] before:opacity-50 md:before:content-gracetext">
-                <h1 className="my-2 basis-4/5 font-montserrat text-6xl font-bold tracking-[.30em]">
+                <h1 className="my-2 basis-4/5 font-montserrat text-5xl font-bold tracking-[.30em] sm:text-6xl">
                   새은혜교회
                 </h1>
-                <h2 className="basis-3/5 font-montserrat text-2xl">
+                <h2 className="basis-3/5 font-montserrat text-xl sm:text-2xl">
                   New Grace Community Church
                 </h2>
               </div>

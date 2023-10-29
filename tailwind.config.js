@@ -17,7 +17,7 @@ export default {
       backgroundImage: (theme) => ({
         "gradient-yellowred":
           "linear-gradient(90deg, #FF616A 0%, #FFC837 100%)",
-        "mobile-home": "url('./assets/HomePageGraphic.png')",
+        "mobile-home": "url('./assets/HomePageGraphic.webp')",
       }),
       fontFamily: {
         dmsans: ["DM Sans", "sans-serif"],
@@ -27,7 +27,6 @@ export default {
         gracetext: "url('/GraceText1.svg')",
         gracetext2: "url('/GraceText2.svg')",
         logo: "url('/logo.svg')",
-        corner: "url('./assets/Corner.png')",
       },
     },
     screens: {

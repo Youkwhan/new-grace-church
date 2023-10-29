@@ -7,7 +7,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import Card from "./Card";
-import AboutPageGraphic from "@/assets/AboutPageGraphic.png";
+import AboutPageGraphic from "@/assets/AboutPageGraphic.webp";
 
 const cards: Array<CardType> = [
   {
@@ -70,9 +70,9 @@ function About({ setSelectedPage }: Props) {
           viewport={{ once: true, amount: 0.5 }}
           variants={container}
         >
-          {cards.map((card: CardType) => (
+          {cards.map((card: CardType, i: number) => (
             <Card
-              key={card.title}
+              key={`${card.title}-${i}`}
               icon={card.icon}
               title={card.title}
               description={card.description}
@@ -95,7 +95,7 @@ function About({ setSelectedPage }: Props) {
           <div className="my-20 md:my-auto">
             {/* TITLE */}
             <div className="relative">
-              <div className="before:absolute before:-top-16 before:z-[1] before:content-logo md:before:-left-12 transform before:scale-75">
+              <div className="transform before:absolute before:-top-16 before:z-[1] before:scale-75 before:content-logo md:before:-left-12">
                 <div className="text-center">
                   <HText>
                     Worship with <span className="text-primary-500">US</span>

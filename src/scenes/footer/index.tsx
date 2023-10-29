@@ -16,7 +16,7 @@ function Footer() {
           <p>© 새은혜교회 All Rights Reserved.</p>
         </div>
         <div className="mt-16 basis-1/4 md:mt-0">
-          <h4 className="font-bold">Links</h4>
+          <h3 className="font-bold">Links</h3>
           <a href="https://www.youtube.com/@hongsonkim7470">
             <p className="my-5">Youtube</p>
           </a>
@@ -28,7 +28,7 @@ function Footer() {
           </a>
         </div>
         <div className="mt-16 basis-1/4 md:mt-0">
-          <h4 className="font-bold">Contact Us</h4>
+          <h3 className="font-bold">Contact Us</h3>
           <p className="my-5">Newgracecommchurch@gmail.com</p>
           <p className="my-5">hongsonkim415@gmail.com</p>
           <p>+1(914) 815-5526</p>
